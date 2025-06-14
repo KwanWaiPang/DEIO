@@ -223,9 +223,8 @@
 <!-- 对应网页效果：https://nerfies.github.io/ -->
 
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
   <div class="hero-body">
-    <!-- <h2 class="title is-2">More Demo Results</h2> -->
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
 
@@ -289,7 +288,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -323,76 +322,148 @@
         Numerical Experiments in ten public challenge datasets demonstrate that our method can achieve superior performance compared with the image-based and event-based benchmarks.  
         </div>
 
-        <!-- 首页图 -->
-        <img src="./static/img/cover_figure.png"
-        class="interpolation-image"
-        alt="The Cover Figure"/>
-
         <div class="content has-text-justified">
-        <h2 class="title is-3">Contributions</h2>
-        We design the learning-optimization-combined framework that tightly-coupled integrate trainable event-based differentiable bundle adjustment (e-DBA) with IMU pre-integration in a patch-based co-visibility factor graph that employs keyframe-based sliding window optimization.
-        <br> The framework is also designed to be easily plug-and-play, with <strong>DEIO</strong> for event-IMU modalities and <strong>DVIO<sup>†</sup></strong> for image-IMU modalities.
-        <p><br></p>
-        <div class="columns is-multiline">
-          <div class="column is-half">
-            <img src="./static/img/DEIO_estimated_trajectories.png" class="fixed-size-image" />
-          </div>
-          <div class="column is-half">
-            <img src="./static/img/DVIO_estimated_trajectories.png" class="fixed-size-image" />
-          </div>
+        <h2 class="title is-3">Qualitative Evaluation</h2>
+        <div align="center">
+          <table style="border: none; background-color: transparent;">
+            <tr align="center">
+              <td style="width: 50%; border: none; padding: 0.01; background-color: transparent; vertical-align: middle;">
+                  <video playsinline autoplay loop muted src="./static/video/deio_fpv.mp4" poster="https://kwanwaipang.github.io/File/Representative_works/loading-icon.gif" alt="sym" width="100%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+                  indoor_forward_7 in <a href="https://fpv.ifi.uzh.ch/" target="_blank">UZH-FPV</a>
+              </td>
+              <td style="width: 50%; border: none; padding: 0.01; background-color: transparent; vertical-align: middle;">
+                <video playsinline autoplay loop muted src="./static/video/DEIO_dark_flying.mp4" poster="https://kwanwaipang.github.io/File/Representative_works/loading-icon.gif" alt="sym" width="100%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+                 Drone Flight in Dark Scene
+              </td>
+            </tr>
+            <tr align="center">
+              <td style="width: 50%; border: none; padding: 0.01; background-color: transparent; vertical-align: middle;">
+                  <video playsinline autoplay loop muted src="./static/video/dynamic_6dof.mp4" poster="https://kwanwaipang.github.io/File/Representative_works/loading-icon.gif" alt="sym" width="100%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+                  dynamic_6dof in <a href="https://rpg.ifi.uzh.ch/davis_data.html" target="_blank">DAVIS240c</a>
+              </td>
+              <td style="width: 50%; border: none; padding: 0.01; background-color: transparent; vertical-align: middle;">
+                <video playsinline autoplay loop muted src="./static/video/boxes_6dof.mp4" poster="https://kwanwaipang.github.io/File/Representative_works/loading-icon.gif" alt="sym" width="100%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+                boxes_6dof in <a href="https://rpg.ifi.uzh.ch/davis_data.html" target="_blank">DAVIS240c</a>
+              </td>
+            </tr>
+            <tr align="center">
+              <td style="width: 50%; border: none; padding: 0.01; background-color: transparent; vertical-align: middle;">
+                  <video playsinline autoplay loop muted src="./static/video/HKU_agg_small_flip.mp4" poster="https://kwanwaipang.github.io/File/Representative_works/loading-icon.gif" alt="sym" width="100%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+                  HKU_agg_small_flip in <a href="https://github.com/arclab-hku/Event_based_VO-VIO-SLAM#Dataset-for-stereo-evio" target="_blank">Stereo-HKU</a>
+              </td>
+              <td style="width: 50%; border: none; padding: 0.01; background-color: transparent; vertical-align: middle;">
+                <video playsinline autoplay loop muted src="./static/video/HKU_agg_tran.mp4" poster="https://kwanwaipang.github.io/File/Representative_works/loading-icon.gif" alt="sym" width="100%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+                HKU_agg_tran in <a href="https://github.com/arclab-hku/Event_based_VO-VIO-SLAM#Dataset-for-stereo-evio" target="_blank">Stereo-HKU</a>
+              </td>
+            </tr>
+            <tr align="center">
+              <td style="width: 50%; border: none; padding: 0.01; background-color: transparent; vertical-align: middle;">
+                  <video playsinline autoplay loop muted src="./static/video/Vicon_dark1.mp4" poster="https://kwanwaipang.github.io/File/Representative_works/loading-icon.gif" alt="sym" width="100%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+                  Vicon_dark1 in <a href="https://github.com/arclab-hku/Event_based_VO-VIO-SLAM#Dataset-for-monocular-evio" target="_blank">Mono-HKU</a>
+              </td>
+              <td style="width: 50%; border: none; padding: 0.01; background-color: transparent; vertical-align: middle;">
+                <video playsinline autoplay loop muted src="./static/video/deio_ecmd.mp4" poster="https://kwanwaipang.github.io/File/Representative_works/loading-icon.gif" alt="sym" width="100%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+                Dense_street_night_easy_a in <a href="https://arclab-hku.github.io/ecmd/" target="_blank">ECMD</a>
+              </td>
+            </tr>
+          </table>
+          <figcaption>
+          </figcaption>
         </div>
 
+        <h2 class="title is-3">Qualitative Comparison Against GT</h2>
+        <div align="center">
+        <img src="./static/img/deio_davis240c.png" width="100%" />
+        <figcaption class="content has-text-justified">  
+        Comparison of the estimated position (X, Y, Z) and orientation (Roll, Pitch, Yaw) results of our DEIO with DEVO in the sequence of (a) boxes_6dof and (b) poster_6dof from the <a href="https://rpg.ifi.uzh.ch/davis_data.html" target="_blank">DAVIS240c</a> dataset. 
+          The DEIO efficiently converts scale ambiguity and aligns closely with the ground truth trajectory.
+        </figcaption>
+        </div>
+
+        <br>
+        <div align="center">
+        <img src="./static/img/deio_hku_dataset.png" width="100%" />
+        <figcaption class="content has-text-justified">  
+          Comparison of the estimated trajectories (in X, Y, Z, and XY-plane) with DEVO in the Mono & Stereo <a href="https://github.com/arclab-hku/Event_based_VO-VIO-SLAM" target="_blank">HKU dataset</a>. 
+        The DEIO seamlessly addresses scale ambiguity and demonstrates precise alignment with the ground truth trajectory.
+        In contrast, the baseline estimates exhibit significant scale discrepancies:
+        (a) The baseline trajectory suffers from drift and an overestimated scale.
+        (b) The baseline trajectory shows an underestimated scale.
+        </figcaption>
+        </div>
+
+         <br>
+        <div align="center">
+        <img src="./static/img/deio_eds.png" width="100%" />
+        <figcaption class="content has-text-justified">  
+          The estimated trajectories of our DEIO against the GT in the sequence of ziggy_hdr and rocket_dark from the <a href="https://rpg.ifi.uzh.ch/eds.html" target="_blank">EDS</a>  dataset. 
+        The image view (visualization-only) demonstrates the lack of perceptible information under low-light conditions, while the event view, though perceptible, remains susceptible to interference from the infrared light of the motion capture system. 
+        Thanks to our robust learning-based event data association, the trajectories estimated by DEIO align remarkably closely with the GT.
+        </figcaption>
+        </div>
+
+        <br>
+        <div align="center">
+        <img src="./static/img/deio_fpv.png" width="100%" />
+        <figcaption class="content has-text-justified">  
+          The estimated trajectories (X, Y, Z, Roll, Pitch, Yaw) of our DEIO against the GT in the sequence of indoor_forward_7 from the <a href="https://fpv.ifi.uzh.ch/" target="_blank">UZH-FPV</a> dataset. 
+        The image view (visualization-only) demonstrates the condition under low texture, HDR, and motion blur.
+        </figcaption>
+        </div>
+
+        <br>
+        <div align="center">
+        <img src="./static/img/deio_dsec.png" width="100%" />
+        <figcaption class="content has-text-justified">  
+         Visualization of estimated trajectories in the <a href="https://dsec.ifi.uzh.ch/" target="_blank">DSEC</a> dataset.
+         Despite using a monocular setup, our DEIO results align more closely with the ground truth compared to other methods, which utilize a stereo setup.
+        </figcaption>
+        </div>
+        </div>  
+        
+         <div class="content has-text-justified">
+        <h2 class="title is-3">Evaluation in Night Driving Scenarios</h2>
+        Driving scenarios pose challenges for event-based state estimation, especially at nighttime, where rampant flickering light (e.g., from LED signs) generates an overwhelming number of noisy events.
+        Additionally, the movement of vehicles, such as sharp turns, sudden stops, and other abrupt movements, can further complicate the event-based estimator.
+        In this section, we select the Dense_street_night_easy_a sequences of the ECMD dataset, which feature numerous flashing lights from vehicles, street signs, buildings, and moving vehicles, making event-based SLAM more difficult.
+        This dataset is recorded with two pairs of stereo event cameras (640 X 480 and 346 X 260) on a car driven through various road conditions such as streets, highways, roads, and tunnels in Hong Kong.
+        Our DEIO runs on the event from the DAVIS346 and the IMU sensor, while the image frame output of the DAVIS346 is only used for illustration purposes.
+        The following figure shows a small drift with a 4.7 m error of our estimated trajectory on the 620 m drive.
+        To the best of our knowledge, we present the first results on pose tracking for night driving scenarios using event and IMU odometry. 
+        The earliest attempt in this area is ESVIO, which utilizes a combination of stereo events, stereo images, and IMU data, whereas DEIO operates with a monocular setup.
+        </div>
+
+        <div align="center">
+          <img src="./static/img/driving_testing.png" width="100%" />
+        <figcaption>  
+        The estimated trajectory of our DEIO in the night driving scenarios and its comparison against the GNSS-INS-RTK as ground truth.
+        The image view is for visualization only.
+        </figcaption>
+        </div>
+
+        <br><br>
         <div class="content has-text-justified">
-        <h2 class="title is-3">Evaluation in Dark Flighting and Driving Scenarios</h2>
-        We evaluate the performance of our DEIO in night driving scenarios and indoor low-light quadrotor flights, respectively.
-        Please note that the image is for illustration purposes only, the DEIO use the event data and IMU data as input.
-        The estimated trajectories are matched with the ground truth pose (GNSS-INS-RTK for driving, and VICON for flighting).
+        <h2 class="title is-3">Evaluation in Dark Quadrotor-Flight</h2>
+        We evaluate our DEIO in a dark quadrotor flight experiment.
+        The quadrotor is commanded to track a circle pattern with 1.5 m in radius and 1.8 m in height.
+        The illuminance in the environment is quite low, resulting in minimal visual information captured by the onboard camera.
+        The total length of the trajectory is 60.7 m, with an MPE of 0.15 and an average pose tracking error of 9 cm.
+        % We further illustrate the estimated trajectories (translation and rotation) of our DEIO against the ground truth, as well as their corresponding errors. 
+        The translation errors in the X, Y, and Z dimensions are all within 0.5 m, while the rotation errors of the Roll and Pitch dimensions are within 6<sup>0</sup>, and the one in the Yaw dimension is within 3<sup>0</sup>.
+        To the best of our knowledge, this is also the first implementation of monocular event-inertial odometry for pose tracking in dark flight environments, while the previous works rely on the image-aided event-IMU estimators.
+        </div>
+
+        <div align="center">
+          <img src="./static/img/flighting_testing.png" width="100%" />
+        <figcaption>  
+        (a) Testing evaluation (the image is for visualization only).
+        (b) The estimated trajectory of our DEIO in the quadrotor flight and its comparison against the ground truth.
+        </figcaption>
         </div>
         
-        <img src="./static/img/driving_testing.png" />
-        <img src="./static/img/flighting_testing.png" />
-
-        <h2 class="title is-3">Quantitative Comparison with SOTA Benchmark</h2>
-        </div>
-          
       </div>      
     </div>
     <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <img src="./static/img/davis240c.png"/>
-
-        <img src="./static/img/mono-hku.png"/>
-
-        <img src="./static/img/stereo-hku.png"/>
-
-        <img src="./static/img/vector.png"/>
-
-        <img src="./static/img/eds.png"/>
-
-      <!-- 最后四张图片按两列排列 -->
-        <div class="columns is-multiline">
-          <div class="column is-half">
-            <img src="./static/img/tum-vie.png" class="fixed-size-image" />
-          </div>
-          <div class="column is-half">
-            <img src="./static/img/uzh-fpv.png" class="fixed-size-image" />
-          </div>
-          <div class="column is-half">
-            <img src="./static/img/mvsec.png" class="fixed-size-image" />
-          </div>
-          <div class="column is-half">
-            <img src="./static/img/dsec.png" class="fixed-size-image" />
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
   </div>
 </section>
 
