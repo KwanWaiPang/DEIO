@@ -313,13 +313,13 @@
 
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-        Event cameras are bio-inspired, motion-activated sensors that demonstrate great potential in handling challenging situations, such as fast motion and high-dynamic range.
-        Despite their promise, existing event-based simultaneous localization and mapping (SLAM) approaches still face limited performance in real-world applications.
-        On the other hand, state-of-the-art SLAM approaches that incorporate deep neural networks show impressive robustness and applicability.
-        However, there is a lack of research on fusing learning-based event SLAM methods with IMU, which could be indispensable to push the event-based SLAM to large-scale, low-texture or complex scenarios. 
-        In this paper, we propose DEIO, the first monocular deep event-inertial odometry framework, which combines learning-based method with traditional nonlinear graph-based optimization. 
-        Specifically, we tightly integrate a trainable event-based differentiable bundle adjustment (e-DBA) with the IMU pre-integration in a patch-based co-visibility factor graph that employs keyframe-based sliding window optimization.
-        Numerical Experiments in ten public challenge datasets demonstrate that our method can achieve superior performance compared with the image-based and event-based benchmarks.  
+        Event cameras show great potential for visual odometry (VO) in handling challenging situations, such as fast motion and high dynamic range. 
+        Despite this promise, the sparse and motion-dependent characteristics of event data continue to limit the performance of feature-based or direct-based data association methods in practical applications. 
+        To address these limitations, we propose Deep Event Inertial Odometry (DEIO), the first monocular learning-based event-inertial framework, which combines a learning-based method with traditional nonlinear graph-based optimization. 
+        Specifically, an event-based recurrent network is adopted to provide accurate and sparse associations of event patches over time.
+        DEIO further integrates it with the IMU to recover up-to-scale pose and provide robust state estimation.
+        The Hessian information derived from the learned differentiable bundle adjustment (DBA) is utilized to optimize the co-visibility factor graph, which tightly incorporates event patch correspondences and IMU pre-integration within a keyframe-based sliding window.
+        Comprehensive validations demonstrate that DEIO achieves superior performance on <strong>10</strong> challenging public benchmarks compared with more than <strong>20</strong> state-of-the-art methods.  
         </div>
 
         <div class="content has-text-justified">
